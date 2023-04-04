@@ -23,7 +23,7 @@ function CreateArea(props) {
    
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="create-note">
         <input 
             onChange={handleChange} 
             name="title" 
