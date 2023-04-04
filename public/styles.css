@@ -7,7 +7,8 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background: #deb886;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
 }
 
@@ -59,10 +60,12 @@ footer p {
   position: relative;
   float: right;
   margin-right: 10px;
+  margin-bottom: 10px;
   color: #f5ba13;
+  font-size:large;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
   outline: none;
 }
@@ -92,6 +95,7 @@ form.create-note button {
   bottom: -18px;
   background: #f5ba13;
   color: #fff;
+  font-size: large;
   border: none;
   border-radius: 50%;
   width: 36px;

@@ -1,10 +1,12 @@
 import React, {useState} from "react";
+import {BiAddToQueue} from 'react-icons/bi'; //add icon
 
 function CreateArea(props) {
     const [note, setNote] = useState({
         title: "",
         content: ""
     })
+    const [isExpanded, setExpanded] = useState(false)
 
     function handleChange(event){
         const {name, value} = event.target
@@ -20,25 +22,31 @@ function CreateArea(props) {
             content: ""
         })
     }
+function expand (){
+    setExpanded(true)
+}
+
    
   return (
     <div>
       <form onSubmit={handleSubmit} className="create-note">
-        <input 
+        {isExpanded && <input
             onChange={handleChange} 
             name="title" 
             value={note.title}
             placeholder="Title" 
-        />
+        />}
         <textarea 
             onChange={handleChange} 
+            onClick={expand}
             name="content" 
             value={note.content}
-            placeholder="Take a note..." rows="3" 
+            placeholder="Take a note..." 
+            rows={isExpanded? 3 : 1}
         />
-        <button 
+        {isExpanded && <button 
             type="submit"
-        >Add</button>
+        ><BiAddToQueue/></button>}
       </form>
     </div>
   );
